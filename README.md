@@ -1,10 +1,10 @@
 # Technological-Infrastructure
 Assignments
 
-These files are for the assignment of Technological Infrastructures at the University of Edinburgh
-Before running any tasks, the test suite should be used with by prompting "nosetests 3.6" into the shell.
-This tests, if the files are including correct data in order to perform the plottings.
-If the tests are failing, make sure the files are correct and in teh right file directory.
+These files are for the assignment of Technological Infrastructures at the University of Edinburgh (Msc Earth Observation and Geoinformation Management).
+Before running any tasks, the test (Tests folder) suite should be used with by prompting "nosetests 3.6" into the shell.
+The script tests, if the files are including correct data in order to perform the plottings.
+If the tests are failing, make sure the files are correct and in the right file directory.
 
 
 Task 1
