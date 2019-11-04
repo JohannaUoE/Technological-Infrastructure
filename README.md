@@ -42,7 +42,7 @@ The '_ _init_ _.py' file reads allows the Package to be read
 
 ## Task 2
 
-Rund Task2.py in the shell, specifying the "natural_neighbourhoods.dat" file
+Run Task2.py in the shell, specifying the "natural_neighbourhoods.dat" file
 If cartopy is not installed yet, install cartopy by using eg. pip install cartopy
 The plot displays the neighboorhoods of Edinburgh. To orientate within the map, the castles is plotted as a point, labelled "Castle"
 
@@ -50,22 +50,13 @@ The plot displays the neighboorhoods of Edinburgh. To orientate within the map, 
 
 This Package includes two files with multiple functions. 
 
-The file 'N_Neigh_Read.py' contains three functions:
-  - 'look_at_file(infile)': This function is only for testing
-  - 'plotIt(x,y)': Plots the x and y coordinates which will be parsed into the function
-  - 'plotNumpy(infile)': Reads the file the file that is parsed into it and returns numpy arrays
-
-The file 'Task1Pandas' contains two functions:
-
-  - 'plotPandas(filename)': This function reads the data of the file using the Package Pandas, which is helpful reading data as DataFrames
-  - 'niceplot(ax)': Plots the data frame that is parsed into the function. Since these datas are a mutation of the sin(x), the ticks of the x axis are converted to pi.
+The file 'N_Neigh_Read' contains three functions:
+  - 'readNeigh(infile)': This function is only for testing and reads all the names of the neighboorhoods
+  - 'read_nat_neigh(infile)': Reads the data of the file. Iterates with a for loop over the lines and decides how the lines shall be handled. Stores a dictionary with entries of each neighboorhood with all coordinates of the vertices
+  - 'plotmap(my_dict)': The dictionary is parsed into the function and plotted with cartopy
 
 The '_ _init_ _.py' file reads allows the Package to be read
 
-Task 2
-Rund Task2.py in the shell, specifying the "natural_neighbourhoods.dat" file
-If cartopy is not installed yet, install cartopy by using eg. pip install cartopy
-The plot displays the neighboorhoods of Edinburgh. To orientate within the map, the castles is plotted as a point, labelled "Castle"
 
 
 
