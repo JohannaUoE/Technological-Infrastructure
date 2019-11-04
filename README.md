@@ -53,10 +53,39 @@ This Package includes two files with multiple functions.
 The file 'N_Neigh_Read' contains three functions:
   - 'readNeigh(infile)': This function is only for testing and reads all the names of the neighboorhoods
   - 'read_nat_neigh(infile)': Reads the data of the file. Iterates with a for loop over the lines and decides how the lines shall be handled. Stores a dictionary with entries of each neighboorhood with all coordinates of the vertices
-  - 'plotmap(my_dict)': The dictionary is parsed into the function and plotted with cartopy
+  - 'plotmap(my_dict)': The dictionary is parsed into the function and plotted with cartopy and an additional shapefile 
+  
 
 The '_ _init_ _.py' file reads allows the Package to be read
 
+Notes: 
+in order to plot the grindlines with corresponding ticks in OSGB, i tried the following:
 
+    gl = ax.gridlines(crs=ccrs.OSGB(), draw_labels=True,
+                  linewidth=1, color='black', alpha=1, linestyle='-')
+    gl.xlabels_top = True
+    gl.ylabels_left = True
+    gl.xlines = True
+    gl.ylines = True
+
+    This error was produced:
+    TypeError: Cannot label OSGB gridlines. Only PlateCarree gridlines are currently supported.
+
+    Therefore, only gridlines in OSGB are displayed.
+    I did not use matplotlib gridlines, because they are orthogonal to the x and y axis, which is wrong
+    within OSGB and do not correspond with the displayed data
 
 --> More details can be read within the codes
+
+## References
+
+Spatial Data Gov Scot (2019), ‘Data Zone Boundaries 2011’.
+URL: https: // www. spatialdata. gov. scot/ geonetwork/ srv/ ger/ catalog.
+search; jsessionid= D7F77645605E75A5049CE35CFB59347F# /metadata/7d3e8709-98fa-4d71-867c-d5c8293823f2
+[last access 05.11.2019]
+
+Lee, K. D. (2011). Python programming fundamentals. Springer.
+
+https://docs.python.org/3/library/argparse.html
+
+
