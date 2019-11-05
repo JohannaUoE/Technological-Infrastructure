@@ -22,6 +22,7 @@ Run Task1.py in the shell, specifying the "plenty.data" file.
 The file uses argparse to allow a user-friendly command-line interfaces.
 
 Two plots are plotted. One is done with numpy arrays. The other is performed with the use of the package Pandas.
+The plots are displaying mutations of sin(x), where x = pi
 
 ### PackageTask1
 This Package includes two files with multiple functions. 
@@ -68,12 +69,12 @@ in order to plot the grindlines with corresponding ticks in OSGB, i tried the fo
     gl.xlines = True
     gl.ylines = True
 
-    This error was produced:
-    TypeError: Cannot label OSGB gridlines. Only PlateCarree gridlines are currently supported.
+This error was produced:
+TypeError: Cannot label OSGB gridlines. Only PlateCarree gridlines are currently supported.
 
-    Therefore, only gridlines in OSGB are displayed.
-    I did not use matplotlib gridlines, because they are orthogonal to the x and y axis, which is wrong
-    within OSGB and do not correspond with the displayed data
+Therefore, only gridlines in OSGB are displayed.
+I did not use matplotlib gridlines, because they are orthogonal to the x and y axis, which is wrong
+within OSGB and do not correspond with the displayed data
 
 --> More details can be read within the codes
 
@@ -86,6 +87,11 @@ search; jsessionid= D7F77645605E75A5049CE35CFB59347F# /metadata/7d3e8709-98fa-4d
 
 Lee, K. D. (2011). Python programming fundamentals. Springer.
 
-https://docs.python.org/3/library/argparse.html
+scitools.org.uk (2019) 'Cartopy Docs'
+URL: https://scitools.org.uk/cartopy/docs/v0.13/index.html [last access 05.11.2019]
+
+
+Docs Python Org (2019) 'argparse — Parser for command-line options, arguments and sub-commands'
+URL: https://docs.python.org/3/library/argparse.html [last access 05.11.2019]
 
 
