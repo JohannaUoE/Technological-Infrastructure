@@ -2,6 +2,8 @@
 Exam No.: B154523
 These files are for the assignment of Technological Infrastructures at the University of Edinburgh (Msc Earth Observation and Geoinformation Management).
 
+This Code is also uploaded on GitHub "JohannaUoE" Repository: "Technological-Infrastructure"
+
 ## Tests
 Before running any tasks, the test (Tests folder) suite should be used by prompting "nosetests 3.6" into the shell. The test file performes 3 test. The script tests, if the files are including correct data in order to perform the plottings. If the tests are failing, make sure the files are correct and in the right file directory. 
 
@@ -87,11 +89,11 @@ search; jsessionid= D7F77645605E75A5049CE35CFB59347F# /metadata/7d3e8709-98fa-4d
 
 Lee, K. D. (2011). Python programming fundamentals. Springer.
 
-scitools.org.uk (2019) 'Cartopy Docs'
+Scitools.org.uk (2019) 'Cartopy Docs'
 URL: https://scitools.org.uk/cartopy/docs/v0.13/index.html [last access 05.11.2019]
 
 
 Docs Python Org (2019) 'argparse — Parser for command-line options, arguments and sub-commands'
 URL: https://docs.python.org/3/library/argparse.html [last access 05.11.2019]
 
-
+Note: References of Stackoverflow are given within in the code
