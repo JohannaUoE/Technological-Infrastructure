@@ -1,8 +1,8 @@
 # Technological-Infrastructure
-Exam No.: B154523
+
 These files are for the assignment of Technological Infrastructures at the University of Edinburgh (Msc Earth Observation and Geoinformation Management).
 
-This Code is also uploaded on GitHub "JohannaUoE" Repository: "Technological-Infrastructure"
+
 
 ## Tests
 Before running any tasks, the test (Tests folder) suite should be used by prompting "nosetests-3.6" into the shell. The test file performes 3 tests. The script tests, if the files are including correct data in order to perform the plottings. If the tests are failing, make sure the files are correct and in the right file directory. 
