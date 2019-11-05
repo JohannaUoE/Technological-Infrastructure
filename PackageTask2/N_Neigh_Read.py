@@ -135,5 +135,5 @@ def plotmap(my_dict):
 
 if __name__ == '__main__':
 
-    readNeigh('natural_neighbourhoods.dat')
-    secondfile('natural_neighbourhoods.dat')
+    readNeigh()
+    read_nat_neigh()
