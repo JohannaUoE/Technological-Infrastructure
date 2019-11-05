@@ -43,4 +43,4 @@ def plotPandas(filename):
 
 if __name__ == '__main__':
 
-    plotPandas('plenty.data')
+    plotPandas()
