@@ -91,11 +91,44 @@ def plotmap(my_dict):
         ax = plt.axes(projection=ccrs.OSGB()) #specify coordinate system
     plt.title('Neighbourhoods of Edinburgh')
     #insert a point like the Castle to orientate better within the map
+    ax.gridlines() # add gridlines
+  
+    ax.text(-0.07, 0.55, 'Norting', va='bottom', ha='center',
+        rotation='vertical', rotation_mode='anchor',
+        transform=ax.transAxes)
+    ax.text(0.5, -0.1, 'Easting', va='bottom', ha='center',
+        rotation='horizontal', rotation_mode='anchor',
+        transform=ax.transAxes)
+    # labelling accrodingly: https://stackoverflow.com/questions/35479508/cartopy-set-xlabel-set-ylabel-not-ticklabels
+    #insert a point like the Castle to orientate better within the map
     ax.plot(325149, 673492, 'bo', transform = ccrs.OSGB())
     ax.text(325148, 673492, 'Castle', transform = ccrs.OSGB())
-    ax.gridlines() # add gridlines
-    ax.set_xticks([305000, 310000, 315000, 320000, 325000, 330000, 335000],crs=ccrs.OSGB())
 
+    ''' in order to plot the grindlines with corresponding ticks in OSGB, i tried the following:
+        based on https://scitools.org.uk/cartopy/docs/v0.13/matplotlib/gridliner.html#cartopy.mpl.gridliner.Gridliner
+    gl = ax.gridlines(crs=ccrs.OSGB(), draw_labels=True,
+                  linewidth=1, color='black', alpha=1, linestyle='-')
+    gl.xlabels_top = True
+    gl.ylabels_left = True
+    gl.xlines = True
+    gl.ylines = True
+
+    This error was produced:
+    TypeError: Cannot label OSGB gridlines. Only PlateCarree gridlines are currently supported.
+
+    Therefore, only gridlines in OSGB are displayed.
+    I did not use matplotlib gridlines, because they are orthogonal to the x and y axis, which is wrong
+    within OSGB and do not correspond with the displayed data
+    '''
+    shapes = 'EdinburghShape.shp'
+
+    #spatial data of the data zones in scotland was derived here:
+    #https://www.spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/7d3e8709-98fa-4d71-867c-d5c8293823f2
+    #data was clipped and dissolved using ArcGIS pro.
+    #The produced shapefile is now called and inserted into the plot.
+    Edin = list(shpreader.Reader(shapes).geometries())
+    ax.add_geometries(Edin, ccrs.OSGB(),
+                  edgecolor='black', facecolor='khaki', alpha=0.5)
 
     plt.show()
 
