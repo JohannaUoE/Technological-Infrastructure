@@ -35,3 +35,9 @@ def test_neigh():
 
     #testing both list samness
     assert_equal(actual_neighboorhood,should_be_neigh)
+
+    
+if __name__ == '__main__':
+    test_neigh()
+    test_numpy2()
+    test_numpy()
