@@ -69,6 +69,6 @@ def plotNumpy(infile):
 
 
 if __name__ == '__main__':
-    x,y = plotNumpy('plenty.data')
+    x,y = plotNumpy()
 
-    look_at_file('plenty.data')
+    look_at_file()
